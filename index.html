@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Ahad — CEO Office Application | Lyzr AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      body {
+        background: radial-gradient(circle at top right, #1f2937 0%, #0b1020 45%, #05070f 100%);
+      }
+      .glass {
+        background: rgba(17, 24, 39, 0.72);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(148, 163, 184, 0.18);
+      }
+      .pulse-dot {
+        animation: pulse 1.8s infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 1; }
+      }
+      .scrollbar-thin::-webkit-scrollbar { height: 8px; width: 8px; }
+      .scrollbar-thin::-webkit-scrollbar-thumb { background: #374151; border-radius: 999px; }
+    </style>
+  </head>
+  <body class="min-h-screen text-slate-100 antialiased">
+    <main class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-10">
+      <header class="glass rounded-2xl p-6 sm:p-8">
+        <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+          <div>
+            <p class="text-xs uppercase tracking-[0.3em] text-emerald-300">Application / CEO Office Ops</p>
+            <h1 class="mt-2 text-3xl font-semibold leading-tight sm:text-4xl">
+              Before this becomes a 30-minute meeting,
+              <span class="text-emerald-300">here are the 3 lines.</span>
+            </h1>
+            <p class="mt-4 max-w-3xl text-slate-300">
+              I already run founder-office loops at an AI startup. I can run Lyzr's operating rhythm by week one. Then I will build the AI agent that makes 70% of this page obsolete.
+            </p>
+          </div>
+          <div class="rounded-xl border border-emerald-500/40 bg-emerald-500/10 p-4 text-sm">
+            <div class="flex items-center gap-2">
+              <span class="h-2.5 w-2.5 rounded-full bg-emerald-300 pulse-dot"></span>
+              <span class="font-medium text-emerald-200">Founder-facing mode: ON</span>
+            </div>
+            <p class="mt-2 text-slate-200">Candidate: Abdul Ahad</p>
+            <p class="text-slate-300">Role: Junior Program Coordinator, CEO Office</p>
+            <p class="text-slate-300">Location ready: Bangalore</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="mt-8 grid gap-6 lg:grid-cols-12">
+        <article class="glass rounded-2xl p-5 sm:p-6 lg:col-span-5">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">Week 1 @ Lyzr — OKR Loop Tracker</h2>
+            <span class="rounded-full bg-blue-500/15 px-3 py-1 text-xs text-blue-200">Operating Rhythm</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-300">Objective: No high-priority cross-functional thread remains unresolved beyond 48 hours.</p>
+
+          <div class="mt-4 space-y-3" id="kr-list">
+            <div class="rounded-xl border border-slate-700/80 p-3">
+              <div class="flex items-center justify-between text-sm">
+                <span>KR1: CEO leadership sync agenda sent 12h before meeting</span>
+                <span class="text-emerald-300">100%</span>
+              </div>
+              <div class="mt-2 h-2 rounded-full bg-slate-800">
+                <div class="h-2 rounded-full bg-emerald-400" style="width: 100%"></div>
+              </div>
+            </div>
+            <div class="rounded-xl border border-slate-700/80 p-3">
+              <div class="flex items-center justify-between text-sm">
+                <span>KR2: RevOps anomalies acknowledged within same business day</span>
+                <span class="text-emerald-300">86%</span>
+              </div>
+              <div class="mt-2 h-2 rounded-full bg-slate-800">
+                <div class="h-2 rounded-full bg-emerald-400" style="width: 86%"></div>
+              </div>
+            </div>
+            <div class="rounded-xl border border-slate-700/80 p-3">
+              <div class="flex items-center justify-between text-sm">
+                <span>KR3: Open ownerless tasks after leadership calls</span>
+                <span class="text-amber-300">2 remaining</span>
+              </div>
+              <div class="mt-2 h-2 rounded-full bg-slate-800">
+                <div class="h-2 rounded-full bg-amber-400" style="width: 70%"></div>
+              </div>
+            </div>
+          </div>
+
+          <button id="close-loop" class="mt-5 w-full rounded-lg bg-emerald-400 px-4 py-2.5 text-sm font-semibold text-slate-900 hover:bg-emerald-300">
+            Simulate "close the loop" follow-up
+          </button>
+          <p id="loop-result" class="mt-3 text-sm text-slate-300"></p>
+        </article>
+
+        <article class="glass rounded-2xl p-5 sm:p-6 lg:col-span-7">
+          <div class="flex items-center justify-between gap-3">
+            <h2 class="text-lg font-semibold">CEO Briefing Card (Mock)</h2>
+            <span class="rounded-full bg-violet-500/15 px-3 py-1 text-xs text-violet-200">Meeting Prep</span>
+          </div>
+
+          <div class="mt-4 grid gap-4 md:grid-cols-2">
+            <div class="rounded-xl border border-slate-700/80 bg-slate-900/50 p-4">
+              <p class="text-xs uppercase tracking-wider text-slate-400">Meeting</p>
+              <p class="mt-1 font-medium">CEO × VP Sales × Product Lead</p>
+              <p class="mt-2 text-sm text-slate-300">Topic: Q2 enterprise pipeline quality + product packaging blockers</p>
+            </div>
+            <div class="rounded-xl border border-slate-700/80 bg-slate-900/50 p-4">
+              <p class="text-xs uppercase tracking-wider text-slate-400">Decision Needed</p>
+              <p class="mt-1 font-medium">Approve pricing experiment for AI workflow add-on</p>
+              <p class="mt-2 text-sm text-slate-300">Deadline: Friday, 5:00 PM IST</p>
+            </div>
+            <div class="rounded-xl border border-slate-700/80 bg-slate-900/50 p-4 md:col-span-2">
+              <p class="text-xs uppercase tracking-wider text-slate-400">3-line pre-read (the meeting killer)</p>
+              <ul class="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-200">
+                <li>Top 12 deals: 4 blocked on packaging clarity, potential ARR impact: $410K.</li>
+                <li>Product can ship clearer add-on definition in 6 days if decision is made now.</li>
+                <li>Ask: approve experiment cohort + owner map; I will push daily closure updates.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="mt-6 grid gap-6 lg:grid-cols-12">
+        <article class="glass rounded-2xl p-5 sm:p-6 lg:col-span-7">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">What Falls Through Without Program Coordination</h2>
+            <span class="rounded-full bg-sky-500/15 px-3 py-1 text-xs text-sky-200">Slack-style Thread</span>
+          </div>
+          <div class="mt-4 max-h-72 space-y-3 overflow-y-auto pr-1 scrollbar-thin">
+            <div class="rounded-xl border border-slate-700/70 p-3 text-sm">
+              <p><span class="font-semibold text-sky-300">#revops</span> · "Dashboard says MQL→SQL dropped 18% this week. Who owns follow-up?"</p>
+              <p class="mt-1 text-emerald-300">→ Assigned: Growth Ops. ETA update: 4 PM.</p>
+            </div>
+            <div class="rounded-xl border border-slate-700/70 p-3 text-sm">
+              <p><span class="font-semibold text-sky-300">#product</span> · "Enterprise trial users confused between assistant modes."</p>
+              <p class="mt-1 text-emerald-300">→ Added to CEO brief + linked to top-of-funnel drop diagnosis.</p>
+            </div>
+            <div class="rounded-xl border border-slate-700/70 p-3 text-sm">
+              <p><span class="font-semibold text-sky-300">#ceo-office</span> · "Leadership sync has 3 overlapping decisions and no final owner."</p>
+              <p class="mt-1 text-emerald-300">→ Converted into decision table with DRIs before call starts.</p>
+            </div>
+            <div class="rounded-xl border border-rose-500/50 bg-rose-500/10 p-3 text-sm text-rose-100">
+              <p class="font-medium">Risk if ignored:</p>
+              <p class="mt-1">Cross-functional latency compounds silently. Pipeline, product, and leadership context drift by next Monday.</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass rounded-2xl p-5 sm:p-6 lg:col-span-5">
+          <div class="flex items-center justify-between">
+            <h2 class="text-lg font-semibold">RevOps Pulse</h2>
+            <span class="rounded-full bg-amber-500/15 px-3 py-1 text-xs text-amber-200">Dummy Live Data</span>
+          </div>
+          <div class="mt-4 grid grid-cols-2 gap-3 text-sm">
+            <div class="rounded-xl border border-slate-700/80 p-3">
+              <p class="text-slate-400">SQL This Week</p>
+              <p class="mt-1 text-xl font-semibold">142</p>
+              <p class="text-emerald-300">+12% WoW</p>
+            </div>
+            <div class="rounded-xl border border-slate-700/80 p-3">
+              <p class="text-slate-400">Demo→POC</p>
+              <p class="mt-1 text-xl font-semibold">37%</p>
+              <p class="text-amber-300">-3% WoW</p>
+            </div>
+            <div class="rounded-xl border border-slate-700/80 p-3">
+              <p class="text-slate-400">Open Exec Follow-ups</p>
+              <p class="mt-1 text-xl font-semibold" id="open-followups">9</p>
+              <p class="text-rose-300">Needs closure</p>
+            </div>
+            <div class="rounded-xl border border-slate-700/80 p-3">
+              <p class="text-slate-400">Briefs Sent <48h</p>
+              <p class="mt-1 text-xl font-semibold">94%</p>
+              <p class="text-emerald-300">Healthy</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="mt-6 glass rounded-2xl p-5 sm:p-6">
+        <h2 class="text-xl font-semibold">Why Abdul (Condensed, but not generic)</h2>
+        <div class="mt-4 grid gap-4 md:grid-cols-2">
+          <div class="rounded-xl border border-slate-700/70 p-4">
+            <h3 class="font-medium text-emerald-300">High-conviction pivots</h3>
+            <p class="mt-2 text-sm text-slate-300">Qualified NEET 2019 (AIR 1471) and cracked JEE Advanced, then deliberately left medicine for tech. I optimize for compounding learning, not inertia.</p>
+          </div>
+          <div class="rounded-xl border border-slate-700/70 p-4">
+            <h3 class="font-medium text-emerald-300">Already living the role</h3>
+            <p class="mt-2 text-sm text-slate-300">4 years at Blend-ed (AI-first LMS, Open edX stack). Progressed from Interaction Design → Product Growth → Founder's Office with cross-functional execution ownership.</p>
+          </div>
+          <div class="rounded-xl border border-slate-700/70 p-4">
+            <h3 class="font-medium text-emerald-300">Proof over claims</h3>
+            <p class="mt-2 text-sm text-slate-300">Led GTM + product experience for AI Course Creator used by 200+ organizations, including Accenture, Deloitte, MIT, Harvard, and Mercado Libre.</p>
+          </div>
+          <div class="rounded-xl border border-slate-700/70 p-4">
+            <h3 class="font-medium text-emerald-300">Agent-builder mindset</h3>
+            <p class="mt-2 text-sm text-slate-300">I already prototype with Stitch, ChatGPT, Google AI Studio, Cursor, Lovable, Emergent, NotebookLM, Gamma, and Firebase Studio—ideal for training the AI copilot that eventually runs the 70% cadence.</p>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-slate-400">Current parallel track: BS in Data Science & Applications, IIT Madras (Diploma stage, GPA 7.52).</p>
+      </section>
+
+      <section class="mt-6 glass rounded-2xl border border-emerald-400/30 p-5 sm:p-6">
+        <p class="text-xs uppercase tracking-[0.25em] text-emerald-300">CTA / Pre-drafted Invite</p>
+        <h2 class="mt-2 text-2xl font-semibold">20-minute working call?</h2>
+        <div class="mt-4 rounded-xl border border-slate-700 bg-slate-900/50 p-4">
+          <p class="font-medium">Subject: Lyzr CEO Office — Week 1 Operating Rhythm Simulation</p>
+          <p class="mt-2 text-sm text-slate-300">Agenda (20 min):</p>
+          <ol class="mt-2 list-decimal space-y-1 pl-5 text-sm text-slate-200">
+            <li>Show how I'd run your OKR + leadership sync cadence.</li>
+            <li>Walk through one real bottleneck and the closure system.</li>
+            <li>Outline AI-agent handoff plan for the repeatable 70%.</li>
+          </ol>
+          <button id="accept-invite" class="mt-4 rounded-lg bg-emerald-400 px-4 py-2 font-semibold text-slate-900 hover:bg-emerald-300">Accept invite</button>
+          <p id="invite-status" class="mt-2 text-sm text-emerald-200"></p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const closeLoopBtn = document.getElementById('close-loop');
+      const loopResult = document.getElementById('loop-result');
+      const followups = document.getElementById('open-followups');
+      const acceptInviteBtn = document.getElementById('accept-invite');
+      const inviteStatus = document.getElementById('invite-status');
+
+      closeLoopBtn.addEventListener('click', () => {
+        const current = Number(followups.textContent);
+        const next = Math.max(0, current - 2);
+        followups.textContent = String(next);
+        loopResult.textContent = `Follow-up ping sent to VP Sales and Product. Owner + deadline captured. Open loops now: ${next}.`;
+      });
+
+      acceptInviteBtn.addEventListener('click', () => {
+        inviteStatus.textContent = 'Great. Placeholder hold created: Friday, 11:00 AM IST · 20 mins · "No deck, only operating model."';
+      });
+    </script>
+  </body>
+</html>
